@@ -1,7 +1,9 @@
+import { useState } from 'react'
+
 import './styles/reset.css'
 import './styles/index.css'
 
-import initialStoreItems from './store-items'
+import Store from './Components/Store'
 
 /*
 Here's what a store item should look like
@@ -14,19 +16,14 @@ Here's what a store item should look like
 What should a cart item look like? 🤔
 */
 
-console.log(initialStoreItems)
+// console.log(initialStoreItems)
 
 export default function App() {
   // Setup state here...
 
   return (
     <>
-      <header id="store">
-        <h1>Greengrocers</h1>
-        <ul className="item-list store--item-list">
-          {/* Wrtite some code here... */}
-        </ul>
-      </header>
+      <Store />
       <main id="cart">
         <h2>Your Cart</h2>
         <div className="cart--item-list-container">
@@ -59,3 +56,9 @@ export default function App() {
     </>
   )
 }
+
+// Plan of action.
+// import the state needed above I think
+// think of how I am gonna break down the components
+// do I need to set up an array of objects for the cart items
+// on clicks and stuff will be needed. passing the function data too.
